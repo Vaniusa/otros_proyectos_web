@@ -1,0 +1,158 @@
+<style type="text/css">
+#imagen1{
+	text-align:center;
+       float:right;
+       margin:20px;
+       
+
+}
+#logo{
+      padding:75px;
+
+}
+p{
+padding-right:60px;
+}
+
+#imagen_grande {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left:0;
+	right:0;
+	width: 700px;
+	height: 405px;
+	z-index: 1;
+	border:solid 5px  #FFFFFF;
+	/*background-color: #FF0000;*/
+}
+
+#total{
+	background-color: #9CC;
+	color:#333;
+}
+
+.preguntas {
+	background: url(../img/plus.png) no-repeat 0 11px ;
+	padding: 10px 0 0 25px;
+	cursor: pointer;
+}
+.preguntas.cerrar {
+	background-image: url(../img/menos.png);
+	
+}
+.respuestas {
+	margin-left: 25px;
+        margin-right:100px;	
+}
+.titulo{
+	text-align:center;
+}
+.principal{
+	margin-left:200px;
+	margin-top:150px;
+padding-bottom:100px;
+     
+	
+}
+</style>
+
+<script src="../JQuery/jquery-1.6.3.min.js"></script>
+<script>
+ $(document).ready(function() {
+	 $("#imagen_grande").hide();
+	   var v_img1=$("#imagen1").attr("src");	     
+  $("#imagen1").bind("click", v_img1, abreimagen);
+  
+  
+  
+   $(".respuesta").hide();
+   $(".principal .preguntas").toggle(function(){
+	   $(this).next(".respuesta").fadeIn();
+	   $(this).addClass("cerrar");
+   },function(){
+	   $(this).next(".respuesta").fadeOut();
+	   $(this).removeClass("cerrar");		
+		
+	});
+	
+});
+
+function abreimagen(e){
+	e.stopPropagation();
+	$("#imagen_grande").fadeIn(1000);
+	$("#img_sustitucion").replaceWith("<img src='" + e.data + "' width='700' height='405'>");      
+	}
+	
+$(document).bind("click keypress", function(){
+	$("#imagen_grande").fadeOut(1000);
+	
+	
+	});
+
+</script>
+
+
+
+<div id="total">
+
+
+	<p id="logo"><a href="../../"><img src="../img/dibujo.png"></a></p>
+    <h1 class="titulo">FAQ</h1>
+
+
+	<div class="principal">
+<h2>Preguntas frecuentes</h2>
+<div id="imagen_grande"><img src="" id="img_sustitucion"></div>
+
+<h3 class="preguntas">¿Sed commodo felis id risus porta, et condimentum nulla iaculis?</h3>
+      <div class="respuesta">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget felis eu diam dignissim rhoncus ac sit amet metus. Proin lacus nisi, ultrices quis leo sit amet, ultrices cursus eros. Curabitur imperdiet ornare justo eget blandit.
+     <img src="../img/10.jpg" width="150" height="100" id="imagen1">
+       <p>  Maecenas at fringilla tortor. Vestibulum commodo dignissim tellus eu maximus. Integer sit amet eros tempus, venenatis purus nec, pulvinar dui. Etiam faucibus dictum cursus. </p>
+         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam finibus lectus a eros pulvinar, vel scelerisque lorem aliquet. Donec ligula libero, euismod id egestas nec, vulputate a est. Fusce dapibus in dui nec porttitor. Duis mollis, sapien non varius rutrum, lorem quam convallis neque, ut pretium augue urna a sem. Sed blandit ipsum eget orci auctor, a vestibulum augue consectetur. Nulla ac quam et dui malesuada viverra. Vivamus id dui vitae eros cursus sollicitudin vitae eu eros. Integer orci lacus, vulputate vitae nibh in, laoreet malesuada velit. Morbi ut magna mi. Nulla fermentum velit sit amet laoreet condimentum. Cras sodales vitae augue vitae dignissim. Proin vitae faucibus nisl. Morbi ornare dolor vitae posuere aliquam. Donec nec eros mattis, venenatis lacus at, consectetur nisl.</p>
+      </div>
+      
+      <h3 class="preguntas">¿Fusce efficitur ligula et consequat fringilla?</h3>
+      <div class="respuesta">
+        <p>Morbi porta dolor eget blandit suscipit. Suspendisse mollis, risus at iaculis volutpat, libero turpis sodales enim, et sollicitudin sem elit at tellus. Vivamus neque dolor, rhoncus nec efficitur in, rhoncus sed ligula. Mauris id mauris odio. Pellentesque eros nisi, blandit pharetra arcu sit amet, laoreet vehicula quam. Donec vulputate consectetur nunc, sed dictum est condimentum a. Maecenas eu porttitor nulla. Nam vehicula arcu justo.</p>
+      </div>
+      
+      <h3 class="preguntas">¿Morbi sit amet erat quis purus maximus dictum sed sed nulla?</h3>
+      <div class="respuesta">
+        <p>Suspendisse potenti. Phasellus sit amet magna lorem. Vivamus posuere commodo odio, id feugiat nibh mollis sed.       
+       
+Proin a enim tempor orci vestibulum egestas. Pellentesque consectetur, mauris a viverra eleifend, nibh leo malesuada tortor, convallis sodales ante arcu sed odio. Donec maximus auctor velit, quis porta felis ullamcorper eget. Maecenas interdum nisl massa, nec tempor sapien commodo nec. Etiam id nisi et mauris tincidunt pharetra. Sed eleifend feugiat lectus, non porta ligula pharetra vel. Donec vel massa efficitur, rhoncus dui non, blandit lacus. Integer placerat massa at nibh tempus malesuada. Etiam sed odio aliquam, porta mauris eu, euismod lacus. Phasellus vehicula pulvinar tristique. Sed pulvinar turpis diam, id gravida ante tincidunt sit amet. Nulla elementum, ipsum at tincidunt sodales, sem mauris rhoncus nunc, sit amet elementum eros sapien non massa. Morbi porttitor faucibus dolor, vel ultricies neque sagittis eget.
+
+Duis quis velit sit amet est efficitur blandit vel vel libero. Sed maximus urna id lectus molestie rhoncus. Etiam iaculis enim ac nunc dictum vehicula. Pellentesque dictum nibh aliquam dapibus ultrices. In interdum ligula felis, nec vulputate leo suscipit in. Morbi sit amet ante dictum odio dapibus aliquam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+Sed luctus diam et aliquet dignissim. Cras accumsan, tellus eu facilisis dapibus, lorem mi tempus mauris, eget pulvinar purus justo vel magna. Sed nunc nunc, bibendum id tortor in, mattis tristique arcu. Duis a efficitur purus. Nunc vitae iaculis dui. Praesent consequat efficitur quam in mollis. Quisque eu placerat eros.</p>
+     
+</div>
+
+ <h3 class="preguntas">¿Fusce non nisi non mauris suscipit faucibus?</h3>
+      <div class="respuesta">
+        <p>Aliquam vehicula metus finibus magna ullamcorper, sed mattis elit iaculis. Cras id tempus dolor, vel sodales odio. Proin id nisi bibendum, auctor elit et, placerat metus. Proin vel urna in leo eleifend tincidunt. Donec vel vulputate tortor, non pulvinar dolor. Quisque et dui at dolor aliquet sodales et consequat velit. Curabitur quis imperdiet sapien. Proin pharetra dolor sit amet dapibus vulputate.</p>
+     
+</div>
+
+ 
+ <h3 class="preguntas">¿Nunc et lectus non libero aliquet vestibulum eget sed ante?</h3>
+      <div class="respuesta">
+        <p>Cras consectetur neque vitae ipsum venenatis, eget fermentum magna interdum. Nullam est tellus, suscipit sed elementum sed, ullamcorper at purus. Vivamus in orci consectetur, consequat tortor a, facilisis justo. Vivamus a leo condimentum, malesuada arcu in, auctor leo. Donec id nunc rutrum, mattis dolor vel, ullamcorper erat. Curabitur non elit eget ante accumsan feugiat eget at velit. In suscipit laoreet mi, ac lobortis ligula placerat non. Maecenas id tincidunt ligula, vel pharetra enim. Ut egestas volutpat sem, in sollicitudin mi vehicula at. Cras luctus elit vel erat iaculis volutpat. Vestibulum aliquet massa ac gravida condimentum.</p>
+     
+</div>
+
+
+ <h3 class="preguntas">¿Maecenas et ligula bibendum, ultricies velit vitae, aliquet neque?</h3>
+      <div class="respuesta">
+        <p>Suspendisse eros lorem, rutrum auctor viverra sed, laoreet eget magna. Suspendisse ut neque dolor. Aenean nisi ipsum, accumsan nec faucibus ac, dignissim quis nibh. Integer et egestas sem. Sed eu enim sit amet nibh blandit hendrerit non vitae urna. Duis convallis vitae lorem in tincidunt. Vestibulum sed enim lorem. Phasellus vehicula ante non turpis pharetra, ac malesuada sapien volutpat. In pellentesque dui vel finibus auctor. Ut vitae dui sit amet justo dignissim aliquet quis vitae ante. Vestibulum dapibus urna sed dolor ornare, id consequat massa ornare. Morbi vestibulum massa mi, non sagittis neque lacinia a. Quisque turpis felis, feugiat id gravida in, posuere ac enim.</p>
+     
+</div>
+
+ <h3 class="preguntas">¿Vestibulum nec nisl eget neque pulvinar tincidunt?</h3>
+      <div class="respuesta">
+        <p>Donec pretium luctus blandit. Fusce pharetra diam nunc, at mollis urna ornare placerat. Duis quis tempus lectus. Sed sodales luctus odio, id ultrices nunc tincidunt at. Nullam dui lorem, lacinia at sagittis sit amet, consectetur vitae nibh. Morbi eget porttitor magna. Integer eu purus vulputate, ornare arcu non, ultrices quam. Nam vestibulum ex diam, et scelerisque leo dignissim a. Cras ac ipsum erat. Nunc ut efficitur turpis. Quisque non neque dolor. In gravida diam eros, eget tempus eros consectetur dignissim. Ut viverra eros sit amet mi ornare ultrices.</p>
+     
+</div>
+
+</div>
