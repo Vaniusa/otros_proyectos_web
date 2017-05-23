@@ -18,6 +18,6 @@ echo $_SESSION["usuario"];
 
 <p>Este es el sitio para usuario registrados.</p>
 <p><a href="usuarios_registrados1.php">Volver</a> </p>
-<p><a href="serar.php">Serrar session</a> </p>
+<p><a href="cerrar.php">Cerrar session</a> </p>
 </body>
 </html>

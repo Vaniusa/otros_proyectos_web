@@ -27,7 +27,7 @@ if(isset($_COOKIE["nombre_usuario"])){
         <td><img src="img/peizaj.jpg" width="300" heigth="166"></td>
     </tr>
 </table>
-<p><a href="serar.php">Salir y borrar cookies</a> </p>
+<p><a href="cerrar.php">Salir y borrar cookies</a> </p>
 
 </body>
 </html>

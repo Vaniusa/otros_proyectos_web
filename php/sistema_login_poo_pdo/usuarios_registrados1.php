@@ -20,6 +20,6 @@ echo $_SESSION["usuario"];
 <p><a href="usuarios_registrados2.php">Pagina 1</a> </p>
 <p><a href="usuarios_registrados3.php">Pagina 2</a> </p>
 <p><a href="usuarios_registrados4.php">Pagina 3</a> </p>
-<p><a href="serar.php">Serrar session</a> </p>
+<p><a href="cerrar.php">Cerrar session</a> </p>
 </body>
 </html>
